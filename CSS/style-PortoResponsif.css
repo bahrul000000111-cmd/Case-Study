@@ -1,0 +1,249 @@
+/* ===== CSS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Biar scroll halus */
+}
+
+/* WARNA TEMA */
+:root {
+    --primary-color: #00A8FF; /* Warna utama */
+    --secondary-color: #F0F8FF; /* Warna background */
+    --text-color: #333333; /* Warna teks utama */
+    --light-text: #666666;
+    --white: #FFFFFF;
+}
+
+/* ===== NAVBAR/HEADER ===== */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Tetap di atas saat scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Di atas semua elemen */
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.logo-text span {
+    color: var(--primary-color); /* Warna aksen */
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none; /* Sembunyi dulu di layar besar */
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+}
+
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background-color: var(--secondary-color);
+    padding: 8rem 2rem 4rem; /* Jarak pas */
+    text-align: center;
+    margin-top: 80px; /* Biar gak tertutup navbar */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+
+/* ===== SECTION PROYEK ===== */
+.projects-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--light-text);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif otomatis */
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: var(--white);
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Efek naik kecil saat hover */
+}
+
+.project-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Biar gambar tidak terpotong */
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-desc {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px; /* Sudut */
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: #0088CC; /* Warna lebih gelap saat hover */
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+/* ===== SECTION KONTAK ===== */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: var(--secondary-color);
+}
+
+.contact-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/* ===== RESPONSIF UNTUK HP (max-width 768px) ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Sembunyiin menu di HP */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex; /* Tampilin tombol hamburger */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Ukuran teks lebih kecil di HP */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Satu kolom aja di HP */
+    }
+}

@@ -2,62 +2,140 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Bahrul - Aspiring Full Stack Web Developer</title>
-    <link rel="stylesheet" href="CSS/style-portofolio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Untuk responsif -->
+    <title>Portofolio Bahrul - Aspiring Full Stack Dev</title>
+    <link rel="stylesheet" href="style-PortoResponsif.css"> <!-- buat file CSS baru buat gaya nya -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> <!-- Tambahin favicon -->
 </head>
 <body>
-    <nav>
-        <div class="logo">Bahrul.dev</div>
-        <ul>
-            <li><a href="Dila-Tech-homepage.html">DilaTech</a></li>
-            <li><a href="Proyek To-Do-List/To-Do-List-Website.html">To-Do-List</a></li>
-            <li><a href="Proyek Profil-Pribadi/Profil-Pribadi-Website.html">Profil-Pribadi</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+    <!-- ===== HEADER/NAVBAR ===== -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <span class="logo-text">Bahrul<span class="text-primary">Porto</span></span>
+                </a>
+            </div>
+            
+            <!-- Menu Navigasi -->
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">Tentang Aku</a>
+                <a href="#projects">Proyek Saya</a>
+                <a href="#contact">Hubungi Saya</a>
+            </nav>
+            
+            <!-- Tombol buat HP -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
 
-    <section class="bio-section">
-        <h1>Halo, Saya Bahrul ulum!</h1>
-        <p>seorang pemuda yang sangat antusias dengan dunia pengembangan web. 
-        <p>Saat ini saya sedang mengikuti Bootcamp Full Stack Web Development Batch 2 di Dibimbing.id, dimana saya belajar dasar-dasar HTML, CSS, JavaScript, GitHub, dan mulai mengenal Tailwind CSS.</p>
-        <p>Saya senang belajar hal baru dan mencoba menerapkan ilmu yang saya dapatkan ke dalam proyek nyata </p>
-        <p>Tujuan saya adalah menjadi Full Stack Web Developer yang handal dan bisa berkontribusi pada proyek-proyek yang menarik!</p>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hai, Saya <span class="text-primary">Bahrul ulum</span></h1>
+                <p>seorang pemuda yang sangat antusias dengan dunia pengembangan web. 
+                <p>Saat ini saya sedang mengikuti Bootcamp Full Stack Web Development Batch 2 di Dibimbing.id, dimana saya belajar dasar-dasar HTML, CSS, JavaScript, GitHub, dan mulai mengenal Tailwind CSS.</p>
+                <p>Saya senang belajar hal baru dan mencoba menerapkan ilmu yang saya dapatkan ke dalam proyek nyata </p>
+                <p>Tujuan saya adalah menjadi Full Stack Web Developer yang handal dan bisa berkontribusi pada proyek-proyek yang menarik!</p><br>
+                <p class="tagline">Aspiring Full Stack Web Developer</p>
+                <a href="https://github.com/bahrul000000111-cmd" class="btn">Lihat Semua Proyek Saya</a>
+            </div>
+        </div>
     </section>
 
+
+    <!-- ===== SECTION PROYEK ===== -->
     <section class="projects-section">
-        <h2>Proyek Saya</h2>
-        <div class="project-card">
-            <h3>DilaTech Website</h3>
-            <p>Website marketplace alat AI berbasis HTML dan CSS. Terdapat fitur navigasi, section kategori, dan tampilan yang responsif.</p>
-            <a href="Dila-Tech-homepage.html">Lihat Proyek</a> | 
-            <a href="https://github.com/bahrul000000111-cmd/Case-Study-DilaTech-Website.git">Repo GitHub</a>
-        </div>
+        <div class="container">
+            <h2 class="section-title">Proyek Saya</h2>
+            <p class="section-subtitle">Beberapa proyek yang telah saya kerjakan dengan penuh semangat!</p>
+            
+            <!-- Grid Proyek Responsif -->
+            <div class="projects-grid">
+                <!-- Proyek 1: DilaTech Website -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/dilatech-thumb.png" alt="DilaTech Website">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">DilaTech Website</h3>
+                        <p class="project-desc">Website marketplace alat AI berbasis HTML & CSS, dengan navigasi dan tampilan responsif.</p>
+                        <div class="project-links">
+                            <a href="Dila-Tech-homepage.html" class="btn">Lihat Proyek</a>
+                            <a href="https://github.com/bahrul000000111-cmd/Case-Study-DilaTech-Website.git" class="btn btn-outline">Repo GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="project-card">
-            <h3>Todo List App</h3>
-            <p>Aplikasi daftar tugas interaktif dengan JavaScript. Fitur meliputi menambah, menghapus, dan menandai tugas selesai.</p>
-            <a href="Proyek To-Do-List/To-Do-List-Website.html">Lihat Proyek</a> | 
-            <a href="https://github.com/bahrul000000111-cmd/Projek-untuk-portofolio.git">Repo GitHub</a>
-        </div>
+                <!-- Proyek 2: Todo List App -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/todolist-thumb.png" alt="Todo List App">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Todo List App</h3>
+                        <p class="project-desc">Aplikasi daftar tugas interaktif berbasis JavaScript, dengan fitur tambah, hapus & tandai tugas.</p>
+                        <div class="project-links">
+                            <a href="Proyek To-Do-List/To-Do-List-Website.html" class="btn">Lihat Proyek</a>
+                            <a href="https://github.com/bahrul000000111-cmd/Projek-untuk-portofolio.git" class="btn btn-outline">Repo GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="project-card">
-            <h3>Profil-Pribadi</h3>
-            <p>Membuat halaman website profil-pribadi dengan menggunakan HTML, CSS, dan JavaScript.</p>
-            <a href="Proyek Profil-Pribadi/Profil-Pribadi-Website.html">Lihat Proyek</a> | 
-            <a href="https://github.com/bahrul000000111-cmd/Projek-untuk-portofolio.git">Repo GitHub</a>
+                <!-- Proyek 3: Profil-Pribadi -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/profil-thumb.png" alt="Profil-Pribadi">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Profil-Pribadi</h3>
+                        <p class="project-desc">Halaman web profil pribadi berbasis HTML, CSS & JavaScript dengan fitur interaktif.</p>
+                        <div class="project-links">
+                            <a href="Proyek Profil-Pribadi/Profil-Pribadi-Website.html" class="btn">Lihat Proyek</a>
+                            <a href="https://github.com/bahrul000000111-cmd/Projek-untuk-portofolio.git" class="btn btn-outline">Repo GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="contact-section" id="contact">
-        <h2>Hubungi Saya</h2>
-        <p>Email: bahrul000000111@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/bahrul000000111-cmd">@bahrul000000111-cmd</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/bahrul-ulum-bab331394/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BOtHjCIthRQubYp4cA%2FI9aQ%3D%3D">Bahrul ulum - Aspiring Full Stack Web Developer</a></p>
+
+    <!-- ===== SECTION HUBUNGI SAYA ===== -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>bahrul000000111@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/bahrul000000111-cmd">@bahrul000000111-cmd</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                     <p>LinkedIn: <a href="https://www.linkedin.com/in/bahrul-ulum-bab331394/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BOtHjCIthRQubYp4cA%2FI9aQ%3D%3D">Bahrul ulum - Aspiring Full Stack Web Developer</a></p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Portofolio Bahrul. Semua Hak Dilindungi.</p>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bahrul Ulum. Semua Hak Cipta Dilindungi.</p>
+        </div>
     </footer>
+
 </body>
 </html>
